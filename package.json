@@ -1,0 +1,32 @@
+{
+  "name": "dpd-server-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://weifang993@github.org/weifang993/dpd-server-ts.git"
+  },
+  "scripts": {
+    "build-ts": "tsc",
+    "start": "npm run serve",
+    "serve": "node dist/app.js",
+    "watch-node": "nodemon dist/app.js",
+    "watch-ts": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/mongodb": "^3.1.17",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "mongodb": "^3.1.10"
+  }
+}
