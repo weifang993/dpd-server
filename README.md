@@ -26,5 +26,5 @@ Alternatively, run `npm run watch-ts` and start debugging in VS Code.
 ## Test Service 
 
 * `npm run build-ts && npm run serve`
-* GET http://localhost:3100/api/drugs/brandName/allergy - List all the drugs that has `allergy` in its brand name. 
+* GET http://localhost:3100/api/drugs/brand_name/allergy - List all the drugs that has `allergy` in its brand name. 
 

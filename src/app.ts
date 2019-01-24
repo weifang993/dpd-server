@@ -3,7 +3,7 @@ import { DBClient } from './dbClient';
 import bodyParser from 'body-parser';
 import { ObjectId, Binary } from "mongodb"
 
-let port = 3000;
+let port = 3100;
 let app = express();
 let router = express.Router();
 var textParser = bodyParser.text()
@@ -22,12 +22,13 @@ router.get('/', function (req, res) {
 });
 
 // find drug by brand name
-router.get('/drugs/:name', (req, res) => {
-    // return all applications without the images for performance
+router.get('/drugs/brand_name/:name', (req, res) => {
     let dbClient = new DBClient();
     dbClient.connect().then(client => {
         let appCol = client.db('dpd').collection('active_drugs');
-        appCol.find({}).toArray().then(drugs => {
+        var re = new RegExp(req.params.name, 'i');
+        let condition = { $regex: re };
+        appCol.find({'brandName': condition }).toArray().then(drugs => {
             client.close();
             res.json(drugs);
         }).catch(err => {
