@@ -12,7 +12,8 @@ export class DBClient {
         let mongodbServiceName = process.env.DATABASE_SERVICE_NAME;
 
         // now for use in docker-compose, the host is 'mongo' as defined in the yaml
-        const url = 'mongodb://' + mongodbUser + ':' + password + '@' + mongodbServiceName + ':27017';
+        // const url = 'mongodb://' + mongodbUser + ':' + password + '@' + mongodbServiceName + ':27017';
+        const url = 'mongodb://admin:BnWO8BOBw58yA62M@mongodb:27017';
         const dbName = 'dpd';        
         const client = new MongoClient(url, { useNewUrlParser: true });
         return client.connect();

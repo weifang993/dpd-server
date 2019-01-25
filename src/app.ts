@@ -3,7 +3,7 @@ import { DBClient } from './dbClient';
 import bodyParser from 'body-parser';
 import { ObjectId, Binary } from "mongodb"
 
-let port = 3100;
+let port = 8080;
 let app = express();
 let router = express.Router();
 var textParser = bodyParser.text()
@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
 
 router.get('/', function (req, res) {
     res.send('<h2>Welcome to the DPD Web Service. </h2> ' +
-        '<p>To get drugs by brand name, call GET http://host:port/api/drugs/[name].</P>');
+        '<p>To get drugs by brand name, call GET http://host:port/api/drugs/brand_name/[name].</P>');
 });
 
 // find drug by brand name

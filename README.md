@@ -28,3 +28,9 @@ Alternatively, run `npm run watch-ts` and start debugging in VS Code.
 * `npm run build-ts && npm run serve`
 * GET http://localhost:3100/api/drugs/brand_name/allergy - List all the drugs that has `allergy` in its brand name. 
 
+## Work with Openshift
+
+* oc login
+* npm run build-ts
+* npm run nodeshift -- --expose
+
