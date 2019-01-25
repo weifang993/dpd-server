@@ -1,4 +1,5 @@
 import { MongoClient, Db, Collection, CollectionInsertManyOptions } from "mongodb";
+import * as env from 'env-var';
 
 export class DBClient {
 
@@ -7,12 +8,11 @@ export class DBClient {
 
     connect() : Promise<MongoClient>{
         // const url = 'mongodb://localhost:27017';
-        let mongodbUser = process.env.MONGODB_USER;
-        let password = process.env.MONGODB_PASSWORD;
-        let mongodbServiceName = process.env.DATABASE_SERVICE_NAME;
+        const HOST = env.get('MONGODB_SERVICE_HOST').required().asString();
+        const PORT = env.get('MONGODB_SERVICE_PORT').required().asIntPositive();
 
         // now for use in docker-compose, the host is 'mongo' as defined in the yaml
-        // const url = 'mongodb://' + mongodbUser + ':' + password + '@' + mongodbServiceName + ':27017';
+        // const url = 'mongodb://admin:' + password + '@' + HOST + ':' + PORT;
         const url = 'mongodb://admin:BnWO8BOBw58yA62M@mongodb:27017';
         const dbName = 'dpd';        
         const client = new MongoClient(url, { useNewUrlParser: true });
