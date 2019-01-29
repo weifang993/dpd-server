@@ -32,5 +32,5 @@ Alternatively, run `npm run watch-ts` and start debugging in VS Code.
 
 * oc login
 * npm run build-ts
-* npm run nodeshift -- --expose
+* npx nodeshift --strictSSL=false --expose
 
