@@ -5,7 +5,7 @@ items:
     kind: DeploymentConfig
     metadata:
       name: dpd-server-ts
-      namespace: cds-application
+      namespace: myproject
       labels:
         project: dpd-server-ts
         version: 1.0.0
@@ -13,7 +13,7 @@ items:
         app: dpd-server-ts
       annotations:
         nodeshift/git-branch: master
-        nodeshift/git-commit: b9a30fde094ab478499c7ce8aa89a983b4a3f41c
+        nodeshift/git-commit: 8f4e3747b031f7cc2c2b3af9c4a2c3a1a28e65e7
     spec:
       replicas: 1
       revisionHistoryLimit: 2
@@ -40,7 +40,7 @@ items:
             app: dpd-server-ts
           annotations:
             nodeshift/git-branch: master
-            nodeshift/git-commit: b9a30fde094ab478499c7ce8aa89a983b4a3f41c
+            nodeshift/git-commit: 8f4e3747b031f7cc2c2b3af9c4a2c3a1a28e65e7
         spec:
           containers:
             - image: dpd-server-ts
@@ -66,14 +66,14 @@ items:
       type: ClusterIP
     metadata:
       name: dpd-server-ts
-      namespace: cds-application
+      namespace: myproject
       labels:
         project: dpd-server-ts
         version: 1.0.0
         provider: nodeshift
       annotations:
         nodeshift/git-branch: master
-        nodeshift/git-commit: b9a30fde094ab478499c7ce8aa89a983b4a3f41c
+        nodeshift/git-commit: 8f4e3747b031f7cc2c2b3af9c4a2c3a1a28e65e7
   - apiVersion: v1
     kind: Route
     spec:

@@ -7,7 +7,7 @@
       "kind": "DeploymentConfig",
       "metadata": {
         "name": "dpd-server-ts",
-        "namespace": "cds-application",
+        "namespace": "myproject",
         "labels": {
           "project": "dpd-server-ts",
           "version": "1.0.0",
@@ -16,7 +16,7 @@
         },
         "annotations": {
           "nodeshift/git-branch": "master",
-          "nodeshift/git-commit": "b9a30fde094ab478499c7ce8aa89a983b4a3f41c"
+          "nodeshift/git-commit": "8f4e3747b031f7cc2c2b3af9c4a2c3a1a28e65e7"
         }
       },
       "spec": {
@@ -55,7 +55,7 @@
             },
             "annotations": {
               "nodeshift/git-branch": "master",
-              "nodeshift/git-commit": "b9a30fde094ab478499c7ce8aa89a983b4a3f41c"
+              "nodeshift/git-commit": "8f4e3747b031f7cc2c2b3af9c4a2c3a1a28e65e7"
             }
           },
           "spec": {
@@ -100,7 +100,7 @@
       },
       "metadata": {
         "name": "dpd-server-ts",
-        "namespace": "cds-application",
+        "namespace": "myproject",
         "labels": {
           "project": "dpd-server-ts",
           "version": "1.0.0",
@@ -108,7 +108,7 @@
         },
         "annotations": {
           "nodeshift/git-branch": "master",
-          "nodeshift/git-commit": "b9a30fde094ab478499c7ce8aa89a983b4a3f41c"
+          "nodeshift/git-commit": "8f4e3747b031f7cc2c2b3af9c4a2c3a1a28e65e7"
         }
       }
     },

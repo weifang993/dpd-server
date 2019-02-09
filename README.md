@@ -34,3 +34,11 @@ Alternatively, run `npm run watch-ts` and start debugging in VS Code.
 * npm run build-ts
 * npx nodeshift --strictSSL=false --expose
 
+## Build and Deploy to Minishift
+
+* minishift oc-enc, then follow instructions to configure the shell for the os
+* oc login (developer/developer)
+* npm run build-ts
+* npx nodeshift --strictSSL=false --expose
+
+Test the REST service: http://dpd-server-ts-myproject.192.168.99.100.nip.io/api/drugs/brand_name/cold. The route may be different on your platform.
