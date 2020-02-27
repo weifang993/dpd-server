@@ -1,7 +1,6 @@
 import express from 'express';
 import { DBClient } from './dbClient';
 import bodyParser from 'body-parser';
-import { ObjectId, Binary } from "mongodb"
 
 let port = 3000;
 let app = express();

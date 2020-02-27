@@ -14,7 +14,6 @@ export class DBClient {
         const PASSWORD = env.get('MONGODB_ROOT_PASSWORD').required().asString();
 
         const dbName = 'dpd';
-        // const url = 'mongodb://wei:pass1234@' + HOST + ':' + PORT + '/' + dbName;               
         const url = 'mongodb://root:' + PASSWORD + '@' + HOST + ':' + PORT;  
         console.log("Connect to db: " + url);
         const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
