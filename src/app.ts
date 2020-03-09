@@ -1,9 +1,8 @@
 import express from 'express';
 import { DBClient } from './dbClient';
 import bodyParser from 'body-parser';
-import { ObjectId, Binary } from "mongodb"
 
-let port = 8080;
+let port = 3000;
 let app = express();
 let router = express.Router();
 var textParser = bodyParser.text()
