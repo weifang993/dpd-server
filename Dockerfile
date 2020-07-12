@@ -6,7 +6,8 @@ WORKDIR /app
 
 # Copy the package.json first for build speed
 COPY package.json /app
-RUN npm install && npm install typescript -g
+RUN npm install 
+RUN npm install typescript -g
 
 # Copy rest of the files we need to our new Directory
 ADD . /app
