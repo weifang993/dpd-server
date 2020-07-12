@@ -5,12 +5,12 @@ FROM node:latest
 WORKDIR /app
 
 # Copy the package.json first for build speed
-COPY package.json /app
+COPY package.json .
 RUN npm install 
 RUN npm install typescript -g
 
 # Copy rest of the files we need to our new Directory
-ADD . /app
+ADD . .
 
 # Expose the port outside of the container
 EXPOSE 3000
