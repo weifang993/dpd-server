@@ -1,13 +1,10 @@
 import express from 'express';
 import { DBClient } from './dbClient';
-import bodyParser from 'body-parser';
 
 let port = 3000;
 let app = express();
 let router = express.Router();
-var textParser = bodyParser.text()
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');

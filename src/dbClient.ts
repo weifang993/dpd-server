@@ -1,4 +1,4 @@
-import { MongoClient, Db, Collection, CollectionInsertManyOptions } from "mongodb";
+import { MongoClient } from 'mongodb';
 import * as env from 'env-var';
 
 export class DBClient {

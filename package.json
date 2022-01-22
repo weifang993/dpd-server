@@ -1,33 +1,28 @@
 {
-  "name": "dpd-server-ts",
+  "name": "typescript-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
-  "repository": {
-    "type": "git",
-    "url": "https://weifang993@github.org/weifang993/dpd-server-ts.git"
-  },
+  "main": "index.js",
   "scripts": {
-    "build-ts": "tsc",
-    "start": "tsc & npm run serve",
-    "serve": "node dist/app.js",
-    "watch-node": "nodemon dist/app.js",
+    "build": "tsc --project ./",
     "watch-ts": "tsc -w",
-    "nodeshift": "nodeshift"
+    "watch-node": "nodemon dist/app.js",
+    "serve": "MONGODB_SERVICE_HOST=localhost MONGODB_SERVICE_PORT=27017 node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/mongodb": "^3.5.2",
-    "@types/express": "^4.17.3",
-    "tslint": "^6.0.0",
-    "typescript": "^3.8.3"
-  },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "env-var": "^6.0.4",
-    "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "mongodb": "^3.5.4"
+    "env-var": "^7.1.1",
+    "express": "^4.17.2",
+    "mongodb": "^3.7.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mongodb": "^3.6.20",
+    "@types/node": "^17.0.10",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
   }
 }
