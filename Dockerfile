@@ -16,7 +16,7 @@ ADD . .
 EXPOSE 3000
 
 # transpile src directory to dist
-RUN npm run build-ts
+RUN npm run build
 
 # Start the server
 ENTRYPOINT ["node", "dist/app.js"]

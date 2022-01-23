@@ -17,7 +17,6 @@ After cloning the repo execute `npm install` to install all dependencies.
 ## Run the application
 
 * `npm run serve` -- Run server only. 
-* `npm run build-ts` -- Build the code only.
 * `npm run build` -- Build the code only.
 * `npm run watch-node` -- Dev auto recompile and restart upon code change. 
 
