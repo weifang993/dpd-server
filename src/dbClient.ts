@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, ReadPreference } from 'mongodb';
 import * as env from 'env-var';
 
 export class DBClient {
@@ -19,7 +19,7 @@ export class DBClient {
             url = 'mongodb://' + USER + ':' + PASSWORD + '@' + HOST + ':' + PORT;          
         }
                  
-        const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+        const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true, readPreference: ReadPreference.PRIMARY_PREFERRED });
         console.log('Connect to MongoDB with URL: ' + url);
         return client.connect();
         
