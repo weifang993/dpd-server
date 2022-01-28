@@ -19,7 +19,7 @@ export class DBClient {
             url = 'mongodb://' + USER + ':' + PASSWORD + '@' + HOST + ':' + PORT;          
         }
                  
-        const client = new MongoClient(url, { useNewUrlParser: true });
+        const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log('Connect to MongoDB with URL: ' + url);
         return client.connect();
         
